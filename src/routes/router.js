@@ -19,7 +19,7 @@ import Drop from '../Components/Icons/Drop.js';
 const AppRouter = () => {
     return (
         <div>
-            <nav className='sticky top-0 border-gray-300 border-b-[1px] flex flex-col gap-y-1 pb-1.5 shadow-xl'>
+            <nav className='bg-white z-50 sticky top-0 border-gray-300 border-b-[1px] flex flex-col gap-y-1 pb-1.5 shadow-xl'>
                 <h1 className='text-[13px] font-bold text-blue-800'>
                     Mes débuts reactjs
                 </h1>
