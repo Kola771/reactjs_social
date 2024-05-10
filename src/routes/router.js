@@ -7,6 +7,8 @@ import MyTodoList from '../Pages/TodoListPage';
 import CounterPage from '../Pages/CounterPage';
 import TimerPage from '../Pages/TimerPage';
 import DragAndDrop from '../Pages/DragAndDrop';
+import ArrayProps from '../Pages/ArrayProps';
+import FormPage from '../Pages/FormPage';
 
 import Notifications from '../Pages/Notifications';
 import Home from '../Components/Icons/Home.js';
@@ -14,6 +16,7 @@ import List from '../Components/Icons/List.js';
 import Compteur from '../Components/Icons/Compteur.js';
 import Timer from '../Components/Icons/Timer.js';
 import Drop from '../Components/Icons/Drop.js';
+import ArrayP from '../Components/Icons/ArrayProp';
 
 
 const AppRouter = () => {
@@ -49,6 +52,16 @@ const AppRouter = () => {
                             <Drop /> Drag and drop
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/my-array-props" className='flex items-center gap-x-2'>
+                            <ArrayP /> Tableau avec props
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/my-form" className='flex items-center gap-x-2'>
+                            Formulaire
+                        </Link>
+                    </li>
                     {/* <li>
                         <Link to="/notifications">Notifications</Link>
                     </li> */}
@@ -61,6 +74,9 @@ const AppRouter = () => {
                 <Route path="/my-todo-list" element={<MyTodoList />} />
                 <Route path="/my-counter" element={<CounterPage />} />
                 <Route path="/my-drag-and-drop" element={<DragAndDrop />} />
+                <Route path="/my-array-props" element={<ArrayProps />} />
+                <Route path="/my-form" element={<FormPage />} />
+                <Route path="/my-timer" element={<TimerPage />} />
                 <Route path="/notifications" element={<Notifications />} />
             </Routes>
         </div>
