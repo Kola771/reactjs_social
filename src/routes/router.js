@@ -4,10 +4,12 @@ import Accueil from '../Pages/Accueil';
 import Profil from '../Pages/Profil';
 import MyTodoList from '../Pages/TodoListPage';
 import CounterPage from '../Pages/CounterPage';
+import TimerPage from '../Pages/TimerPage';
 import Notifications from '../Pages/Notifications';
 import Home from '../Components/Icons/Home.js';
 import List from '../Components/Icons/List.js';
 import Compteur from '../Components/Icons/Compteur.js';
+import Timer from '../Components/Icons/Timer.js';
 
 
 const AppRouter = () => {
@@ -33,6 +35,11 @@ const AppRouter = () => {
                             <Compteur />
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/my-timer">
+                            <Timer />
+                        </Link>
+                    </li>
                     {/* <li>
                         <Link to="/notifications">Notifications</Link>
                     </li> */}
@@ -44,6 +51,7 @@ const AppRouter = () => {
                 {/* <Route path="/profil" element={<Profil />} /> */}
                 <Route path="/my-todo-list" element={<MyTodoList />} />
                 <Route path="/my-counter" element={<CounterPage />} />
+                <Route path="/my-timer" element={<TimerPage />} />
                 <Route path="/notifications" element={<Notifications />} />
             </Routes>
         </div>
