@@ -9,6 +9,7 @@ import TimerPage from '../Pages/TimerPage';
 import DragAndDrop from '../Pages/DragAndDrop';
 import ArrayProps from '../Pages/ArrayProps';
 import FormPage from '../Pages/FormPage';
+import ImagePage from '../Pages/ImagePage';
 
 import Notifications from '../Pages/Notifications';
 import Home from '../Components/Icons/Home.js';
@@ -62,6 +63,11 @@ const AppRouter = () => {
                             Formulaire
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/my-image" className='flex items-center gap-x-2'>
+                        Télécharger une image
+                        </Link>
+                    </li>
                     {/* <li>
                         <Link to="/notifications">Notifications</Link>
                     </li> */}
@@ -76,6 +82,7 @@ const AppRouter = () => {
                 <Route path="/my-drag-and-drop" element={<DragAndDrop />} />
                 <Route path="/my-array-props" element={<ArrayProps />} />
                 <Route path="/my-form" element={<FormPage />} />
+                <Route path="/my-image" element={<ImagePage />} />
                 <Route path="/my-timer" element={<TimerPage />} />
                 <Route path="/notifications" element={<Notifications />} />
             </Routes>
