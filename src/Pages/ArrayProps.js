@@ -1,33 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrayProp from '../Components/ArrayProp';
+import userStore from '../store/userStore'; // Importe le userStore
 
 const Accueil = () => {
-    // Définissions les données à passer au composant enfant
-    const [users, setUsers] = useState([
-        {
-            name: "ABOUDOU Koladé M.",
-            email: "koladeaboudou@gmail.com",
-            produice: "Air Force",
-            price: "100 €"
-        },
-        {
-            name: "AGNOUN Euloge",
-            email: "aeuloge@gmail.com",
-            produice: "Air Force",
-            price: "100 €"
-        },
-        {
-            name: "GOUNON Silvinoh",
-            email: "edhorgounon@gmail.com",
-            produice: "Air Force",
-            price: "100 €"
-        }
-    ]);
+    // Récupérons tous les utilisateurs
+    userStore.dispatch({
+        type: 'ALL_USER'
+    });
+    // Définis une fonction pour obtenir les utilisateurs à partir du userStore
+    const getUsersFromStore = () => userStore.getState().users;
+    // Utilisation de useState pour stocker les utilisateurs
+    const [users, setUsers] = useState(getUsersFromStore());
 
     // Fonction pour recevoir les données envoyées depuis le composant enfant
     const receiveDataFromChild = (value) => {
-      let newUsers = users.filter((_, i) => i !== value);
-      setUsers(newUsers);
+        let newUsers = users.filter((_, i) => i !== value);
+        setUsers(newUsers);
     };
 
     return (

@@ -18,6 +18,7 @@ import Compteur from '../Components/Icons/Compteur.js';
 import Timer from '../Components/Icons/Timer.js';
 import Drop from '../Components/Icons/Drop.js';
 import ArrayP from '../Components/Icons/ArrayProp';
+import WatchPage from '../Pages/WatchPage';
 
 
 const AppRouter = () => {
@@ -68,6 +69,11 @@ const AppRouter = () => {
                         Télécharger une image
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/my-watch" className='flex items-center gap-x-2'>
+                        Watch event
+                        </Link>
+                    </li>
                     {/* <li>
                         <Link to="/notifications">Notifications</Link>
                     </li> */}
@@ -84,6 +90,7 @@ const AppRouter = () => {
                 <Route path="/my-form" element={<FormPage />} />
                 <Route path="/my-image" element={<ImagePage />} />
                 <Route path="/my-timer" element={<TimerPage />} />
+                <Route path="/my-watch" element={<WatchPage />} />
                 <Route path="/notifications" element={<Notifications />} />
             </Routes>
         </div>
